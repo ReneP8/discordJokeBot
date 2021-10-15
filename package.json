@@ -4,7 +4,8 @@
     "description": "This is a Discord Bot for telling some jokes in Discord voice Channel.",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint src/"
+        "lint": "eslint src/",
+        "start": "node src/index.js"
     },
     "repository": {
         "type": "git",
@@ -16,5 +17,9 @@
     "bugs": {
         "url": "https://github.com/ReneP8/discordJokeBot/issues"
     },
-    "homepage": "https://github.com/ReneP8/discordJokeBot#readme"
+    "homepage": "https://github.com/ReneP8/discordJokeBot#readme",
+    "dependencies": {
+        "discord.js": "^13.2.0",
+        "dotenv": "^10.0.0"
+    }
 }
