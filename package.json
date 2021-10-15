@@ -1,0 +1,29 @@
+{
+  "name": "discordJokeBot",
+  "version": "1.0.0",
+  "description": "This is a Discord Bot for telling some jokes in Discord voice Channel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReneP8/discordJokeBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReneP8/discordJokeBot/issues"
+  },
+  "homepage": "https://github.com/ReneP8/discordJokeBot#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2"
+  }
+}
