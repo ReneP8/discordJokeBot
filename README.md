@@ -1,6 +1,6 @@
 This is a Discord Bot for telling some jokes in Discord voice Channel.
 
-##TODO
+## TODO
 
 * [ ] Setup project including eslint
 * [ ] Create a Discord application/Bot
