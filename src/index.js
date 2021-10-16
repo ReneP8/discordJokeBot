@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const { Client, Intents } = require('discord.js');
 
-
 require('dotenv').config();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES] });
@@ -14,7 +13,6 @@ async function getRandomJoke() {
     } catch (error) {
         console.log(error);
     }
-
 }
 
 client.once('ready', () => {
@@ -24,7 +22,7 @@ client.once('ready', () => {
 client.on('messageCreate', async(msg) => {
     if (msg.content === '!joke') {
         await getRandomJoke().then(joke => {
-            msg.reply(joke[0].text)
+            msg.channel.send(joke[0].text, { tts: true })
                 .then(() => console.log(`Replied to message "${msg.content}"`))
                 .catch(console.error);
         }).catch(error => console.log(error));
