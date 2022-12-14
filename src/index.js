@@ -15,6 +15,17 @@ async function getRandomJoke() {
     }
 }
 
+async function getRandomStrombergQuote() {
+
+    try {
+        const response = await fetch('https://stromberg-api.de/api/quotes/random');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 client.once('ready', () => {
     console.log('Beep beep! I am ready!');
 });
@@ -23,6 +34,13 @@ client.on('messageCreate', async(msg) => {
     if (msg.content === '!joke') {
         await getRandomJoke().then(joke => {
             msg.channel.send(joke[0].text, { tts: true })
+                .then(() => console.log(`Replied to message "${msg.content}"`))
+                .catch(console.error);
+        }).catch(error => console.log(error));
+    }
+    if (msg.content === '!papa') {
+        await getRandomStrombergQuote().then(joke => {
+            msg.channel.send(joke.quote, { tts: true })
                 .then(() => console.log(`Replied to message "${msg.content}"`))
                 .catch(console.error);
         }).catch(error => console.log(error));
